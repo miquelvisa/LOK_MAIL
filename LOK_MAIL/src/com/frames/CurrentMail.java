@@ -42,7 +42,7 @@ public class CurrentMail extends JFrame {
 	 */
 	public CurrentMail(String asunto) {
 		String[] msg = getInfo(asunto);
-		setTitle("Correo electr\u00F3nico");
+		setTitle("Mensaje de: "+msg[1]);
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 489, 537);
@@ -84,17 +84,17 @@ public class CurrentMail extends JFrame {
 	
 	public static String[] getInfo(String asunto){
 		ArrayList<String[]> mensajes = new ArrayList<String[]>();
-		String[] msg1 = {"Credenciales restablecidos","Alexander Smith <alexandersmith@lok.com>","Querido amigo:<br>Pene."};
-		String[] msg2 = {"Regalo para Sarah","Alexander Smith <alexandersmith@lok.com>",readHTMLFile(2)};
-		String[] msg3 = {"Credenciales restablecidos","Alexander Smith <alexandersmith@lok.com>","Querido amigo:\nPene."};
-		String[] msg4 = {"Credenciales restablecidos","Alexander Smith <alexandersmith@lok.com>","Querido amigo:\nPene."};
-		String[] msg5 = {"Credenciales restablecidos","Alexander Smith <alexandersmith@lok.com>","Querido amigo:\nPene."};
-		String[] msg6 = {"Credenciales restablecidos","Alexander Smith <alexandersmith@lok.com>","Querido amigo:\nPene."};
-		String[] msg7 = {"Credenciales restablecidos","Alexander Smith <alexandersmith@lok.com>","Querido amigo:\nPene."};
-		String[] msg8 = {"Credenciales restablecidos","Alexander Smith <alexandersmith@lok.com>","Querido amigo:\nPene."};
-		String[] msg9 = {"Credenciales restablecidos","Alexander Smith <alexandersmith@lok.com>","Querido amigo:\nPene."};
-		String[] msg10 = {"Credenciales restablecidos","Alexander Smith <alexandersmith@lok.com>","Querido amigo:\nPene."};
-		String[] msg11 = {"Credenciales restablecidos","Alexander Smith <alexandersmith@lok.com>","Querido amigo:\nPene."};
+		String[] msg1 = {"Credenciales restablecidos","Alexander Smith <alexandersmith@codebrain.com>",readHTMLFile(1)};
+		String[] msg2 = {"Regalo para Sarah","Alexander Smith <alexandersmith@codebrain.com>",readHTMLFile(2)};
+		String[] msg3 = {"Credenciales restablecidos","Alexander Smith <alexandersmith@codebrain.com>",readHTMLFile(3)};
+		String[] msg4 = {"Credenciales restablecidos","Alexander Smith <alexandersmith@codebrain.com>",readHTMLFile(4)};
+		String[] msg5 = {"Credenciales restablecidos","Alexander Smith <alexandersmith@codebrain.com>",readHTMLFile(5)};
+		String[] msg6 = {"Credenciales restablecidos","Alexander Smith <alexandersmith@codebrain.com>",readHTMLFile(6)};
+		String[] msg7 = {"Credenciales restablecidos","Alexander Smith <alexandersmith@codebrain.com>",readHTMLFile(7)};
+		String[] msg8 = {"Credenciales restablecidos","Alexander Smith <alexandersmith@codebrain.com>",readHTMLFile(8)};
+		String[] msg9 = {"Credenciales restablecidos","Alexander Smith <alexandersmith@codebrain.com>",readHTMLFile(9)};
+		String[] msg10 = {"Credenciales restablecidos","Alexander Smith <alexandersmith@codebrain.com>",readHTMLFile(10)};
+		String[] msg11 = {"Credenciales restablecidos","Alexander Smith <alexandersmith@codebrain.com>",readHTMLFile(11)};
 		
 		mensajes.add(msg1);
 		mensajes.add(msg2);
