@@ -20,6 +20,7 @@ public class CurrentMail extends JFrame {
 	private JPanel contentPane;
 	private JTextField textField_de;
 	private JTextField textField_asunto;
+	private JTextField textField;
 
 	/**
 	 * Launch the application.
@@ -77,24 +78,37 @@ public class CurrentMail extends JFrame {
 		
 		JEditorPane mensaje = new JEditorPane();
 		mensaje.setContentType("text/html");
-		mensaje.setBounds(10, 64, 463, 434);
-		mensaje.setText(msg[2]);
+		mensaje.setBounds(10, 92, 463, 406);
+		mensaje.setText(msg[3]);
 		contentPane.add(mensaje);
+		
+		JLabel lblFechaDeEnvio = new JLabel("Fecha:");
+		lblFechaDeEnvio.setHorizontalAlignment(SwingConstants.CENTER);
+		lblFechaDeEnvio.setBounds(10, 67, 46, 14);
+		contentPane.add(lblFechaDeEnvio);
+		
+		textField = new JTextField();
+		textField.setHorizontalAlignment(SwingConstants.LEFT);
+		textField.setText(msg[2]);
+		textField.setEditable(false);
+		textField.setColumns(10);
+		textField.setBounds(67, 64, 406, 20);
+		contentPane.add(textField);
 	}
 	
 	public static String[] getInfo(String asunto){
 		ArrayList<String[]> mensajes = new ArrayList<String[]>();
-		String[] msg1 = {"Credenciales restablecidos","Alexander Smith <alexandersmith@codebrain.com>",readHTMLFile(1)};
-		String[] msg2 = {"Regalo para Sarah","Alexander Smith <alexandersmith@codebrain.com>",readHTMLFile(2)};
-		String[] msg3 = {"Credenciales restablecidos","Alexander Smith <alexandersmith@codebrain.com>",readHTMLFile(3)};
-		String[] msg4 = {"Credenciales restablecidos","Alexander Smith <alexandersmith@codebrain.com>",readHTMLFile(4)};
-		String[] msg5 = {"Credenciales restablecidos","Alexander Smith <alexandersmith@codebrain.com>",readHTMLFile(5)};
-		String[] msg6 = {"Credenciales restablecidos","Alexander Smith <alexandersmith@codebrain.com>",readHTMLFile(6)};
-		String[] msg7 = {"Credenciales restablecidos","Alexander Smith <alexandersmith@codebrain.com>",readHTMLFile(7)};
-		String[] msg8 = {"Credenciales restablecidos","Alexander Smith <alexandersmith@codebrain.com>",readHTMLFile(8)};
-		String[] msg9 = {"Credenciales restablecidos","Alexander Smith <alexandersmith@codebrain.com>",readHTMLFile(9)};
-		String[] msg10 = {"Credenciales restablecidos","Alexander Smith <alexandersmith@codebrain.com>",readHTMLFile(10)};
-		String[] msg11 = {"Credenciales restablecidos","Alexander Smith <alexandersmith@codebrain.com>",readHTMLFile(11)};
+		String[] msg1 = {"Credenciales restablecidos","Alexander Smith <alexandersmith@codebrain.com>","12/01/2017 - 15:57:23",readHTMLFile(1)};
+		String[] msg2 = {"Regalo para Sarah","Alexander Smith <alexandersmith@codebrain.com>","09/01/2017 - 16:31:42",readHTMLFile(2)};
+		String[] msg3 = {"Problemas de conexión","Alexander Smith <alexandersmith@codebrain.com>","03/01/2017 - 10:12:03",readHTMLFile(3)};
+		String[] msg4 = {"Shutdown del sistema","John Moore <johnmoore@codebrain.com>","04/01/2017 - 07:03:14",readHTMLFile(4)};
+		String[] msg5 = {"Celdas 4 y 5","Alexander Smith <alexandersmith@codebrain.com>","31/12/2016 - 14:12:51",readHTMLFile(5)};
+		String[] msg6 = {"Resumen ultimo trimestre","Alexander Smith <alexandersmith@codebrain.com>","12-01-2017",readHTMLFile(6)};
+		String[] msg7 = {"Bankus: Estado de su cuenta","Alexander Smith <alexandersmith@codebrain.com>","12-01-2017",readHTMLFile(7)};
+		String[] msg8 = {"Bankus: Transferencia #2124","Alexander Smith <alexandersmith@codebrain.com>","12-01-2017",readHTMLFile(8)};
+		String[] msg9 = {"Bankus: Transferencia #2123","Alexander Smith <alexandersmith@codebrain.com>","12-01-2017",readHTMLFile(9)};
+		String[] msg10 = {"Meeting","Patrick Brown <patrickbrown@brainless.com>","19/12/2016 - 13:12:18",readHTMLFile(10)};
+		String[] msg11 = {"Precaución","Información de Secure Brain <info@securebrain.com>","15/12/2016 - 14:58:05",readHTMLFile(11)};
 		
 		mensajes.add(msg1);
 		mensajes.add(msg2);
